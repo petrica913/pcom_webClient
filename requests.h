@@ -11,7 +11,8 @@ char *compute_post_request(char *host, char *url, char* content_type, char **bod
 							int body_data_fields_count, char** cookies, int cookies_count,
 							char *token);
 // computes and returns a DELETE request string (cookies can be NULL if not needed)
-char compute_delete_request(char *host, char *url, char *token);					
+char *compute_delete_request(char *host, char *url, char *query_params,
+                            char **cookies, int cookies_count, char *token);
 char* get_cookies(char* response);
 char* get_token(char* response);
 #endif
