@@ -10,7 +10,7 @@
 
 
 #define COMMAND_LEN 40
-#define USR_PASSWD_LEN 20
+#define USR_PASSWD_LEN 100
 
 #define DIE(assertion, call_description)	                    \
 	do {									                    \

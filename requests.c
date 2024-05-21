@@ -36,6 +36,8 @@ char *compute_get_request(char *host, char *url, char *query_params,
         sprintf(line, "Cookie: %s", cookies[0]);
         compute_message(message, line);
     }
+    sprintf(line, "Connection: keep-alive");
+    compute_message(message, line);
 
     // Step 4: add final new line
     compute_message(message, "");
@@ -88,6 +90,8 @@ char *compute_post_request(char *host, char *url, char* content_type, char **bod
         sprintf(line, "Authorization: Bearer %s", token);
         compute_message(message, line);
     }
+    sprintf(line, "Connection: keep-alive");
+    compute_message(message, line);
 
     // Step 5: add new line at end of header
     compute_message(message, "");
@@ -128,6 +132,8 @@ char *compute_delete_request(char *host, char *url, char *query_params,
         sprintf(line, "Cookie: %s", cookies[0]);
         compute_message(message, line);
     }
+    sprintf(line, "Connection: keep-alive");
+    compute_message(message, line);
 
     // Step 4: add final new line
     compute_message(message, "");
